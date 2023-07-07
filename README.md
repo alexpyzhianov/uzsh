@@ -18,11 +18,15 @@ exa
 2. Clone the repository
 
 ```
-TODO
+git clone git@github.com:alexpyzhianov/uzsh.git
 ```
 
 3. Use symlinks to set things up
 
 ```
-TODO
+ln -s $HOME/repo/location/.zgit $HOME
+ln -s $HOME/repo/location/.zshrc $HOME
 ```
+
+4. Restart your terminal
+5. Hack and experiment to make it yours
