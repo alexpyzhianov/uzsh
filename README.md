@@ -13,6 +13,9 @@ fzf
 bat
 rg
 exa
+htop
+nvim
+dua
 ```
 
 2. Clone the repository

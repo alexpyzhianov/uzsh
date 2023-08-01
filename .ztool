@@ -1,0 +1,13 @@
+# Node version management
+export N_PREFIX=~/.n
+export PATH=$N_PREFIX/bin:$PATH
+
+# go
+export GOPATH=~/go
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
+
+# rust
+export RUST_BIN=~/.cargo/bin
+export PATH=$RUST_BIN:$PATH
+

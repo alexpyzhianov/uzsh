@@ -198,3 +198,4 @@ alias g\?="git-alias-lookup ${gmodule_home}"
 
 # Cannot use anon function with local variables, because we're evaluating ${0}
 unset gmodule_home
+

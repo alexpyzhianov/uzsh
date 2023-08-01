@@ -32,7 +32,16 @@ source ~/zsh-z/zsh-z.plugin.zsh
 # Git aliases
 source ~/.zgit
 
-# Other aliases
+# Aliases
 alias l='exa -la'
 alias cat='bat'
 alias grep='rg'
+alias vim='nvim'
+alias top='htop'
+alias du='dua'
+alias fd='find'
+alias g='lazygit'
+
+# Tool configs
+source ~/.ztool
+
