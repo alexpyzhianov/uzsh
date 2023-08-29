@@ -4,18 +4,10 @@ This is a basic zsh configuration designed to be both simple and powerful. Use i
 
 ## Installation
 
-1. Install the recommended dependencies (no detailed instruction on this, sorry)
+1. Install the recommended dependencies
 
 ```
-zsh-syntax-highlighting
-zsh-z
-fzf
-bat
-rg
-exa
-htop
-nvim
-dua
+brew install zsh-syntax-highlighting zoxide fzf bat rg exa htop nvim dua
 ```
 
 2. Clone the repository
@@ -29,6 +21,7 @@ git clone git@github.com:alexpyzhianov/uzsh.git
 ```
 ln -s $HOME/repo/location/.zgit $HOME
 ln -s $HOME/repo/location/.zshrc $HOME
+ln -s $HOME/repo/location/.ztool $HOME
 ```
 
 4. Restart your terminal
