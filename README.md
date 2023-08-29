@@ -7,7 +7,7 @@ This is a basic zsh configuration designed to be both simple and powerful. Use i
 1. Install the recommended dependencies
 
 ```
-brew install zsh-syntax-highlighting zoxide fzf bat rg exa htop nvim dua
+brew install zsh-syntax-highlighting zoxide fzf bat rg exa htop nvim dua && /opt/homebrew/opt/fzf/install
 ```
 
 2. Clone the repository
