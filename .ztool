@@ -8,6 +8,7 @@ export RUST_BIN=~/.cargo/bin
 export PATH=$RUST_BIN:$PATH
 
 # Node version management
+export NVM_LAZY_LOAD=true
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # aws
