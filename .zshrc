@@ -30,6 +30,9 @@ source ~/.zgit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 100% --layout=reverse'
 
+# exa
+alias l="exa -la"
+
 # z
 eval "$(zoxide init zsh)"
 
@@ -38,5 +41,12 @@ alias aws="aws-mfa-secure session"
 alias awsd="export AWS_PROFILE=default && aws-mfa-secure session"
 
 # ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+export PATH=/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH
+
+# node
+export PATH=~/.node_versions/v20/bin:$PATH
+
+# terraform
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
