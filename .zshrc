@@ -30,7 +30,9 @@ source ~/.zgit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 100% --layout=reverse'
 
-# exa
+# basics
+alias c="clear"
+alias x="exit"
 alias l="exa -la"
 
 # z
@@ -47,6 +49,6 @@ export PATH=/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH
 # node
 export PATH=~/.node_versions/v20/bin:$PATH
 
-# terraform
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+# .zshrc
+alias rc="code ~/repos/uzsh"
+alias src="source ~/.zshrc"
