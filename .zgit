@@ -7,9 +7,15 @@ alias gi='git init'
 alias ga='git add'
 alias gaa='git add .'
 
-# Commit / clone
+# Commit
 alias gc='git commit'
 alias gcm='git commit -m'
+alias gcn='git commit --no-verify'
+alias gca='git commit --amend'
+alias gcar='git commit --amend --reuse-message=HEAD'
+alias gcarr='git commit --amend --reuse-message=HEAD --reset-author'
+
+# Clone
 alias gcl='git clone'
 
 # Reset / remote
@@ -33,6 +39,7 @@ alias gl='git log --date=relative'
 alias glg='gl --graph'
 alias gls='gl --stat'
 alias glp='gl --patch'
+alias glo='git log --pretty=format:"%h   %s %C(yellow)(%cr)"'
 
 # Branch
 alias gb='git branch'
@@ -50,6 +57,7 @@ alias gms='git merge --skip'
 
 # Push / pull
 alias gpu='git push'
+alias gpuf='git push -f'
 alias gpuu='git push -u origin HEAD'
 alias gpl='git pull'
 

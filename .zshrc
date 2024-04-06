@@ -1,11 +1,11 @@
-# prompt
+# version control
 autoload -Uz vcs_info
 precmd() { vcs_info }
-
 zstyle ':vcs_info:git:*' formats '%b '
 
+# prompt
 setopt PROMPT_SUBST
-PROMPT='%F{white}%~%f %F{cyan}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{white}%~%f %F{cyan}${vcs_info_msg_0_}%f> '
 
 # syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -23,20 +23,20 @@ zstyle ':completion:*' menu select
 # silent login
 [ ! -f ~/.hushlogin ] && touch ~/.hushlogin
 
-# git (aliases)
+# aliases
 source ~/.zgit
+alias c="clear"
+alias x="exit"
+alias l="exa -la"
+alias rc="code ~/repos/uzsh"
+alias src="source ~/.zshrc"
+
+# z
+eval "$(zoxide init zsh)"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 100% --layout=reverse'
-
-# basics
-alias c="clear"
-alias x="exit"
-alias l="exa -la"
-
-# z
-eval "$(zoxide init zsh)"
 
 # aws
 alias aws="aws-mfa-secure session"
@@ -46,9 +46,8 @@ alias awsd="export AWS_PROFILE=default && aws-mfa-secure session"
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH
 
+# bash
+export PATH=/opt/homebrew/bin:$PATH
+
 # node
 export PATH=~/.node_versions/v20/bin:$PATH
-
-# .zshrc
-alias rc="code ~/repos/uzsh"
-alias src="source ~/.zshrc"
