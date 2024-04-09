@@ -1,11 +1,11 @@
 # version control
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%b '
+zstyle ':vcs_info:git:*' formats '%b'
 
 # prompt
 setopt PROMPT_SUBST
-PROMPT='%F{white}%~%f %F{cyan}${vcs_info_msg_0_}%f> '
+PROMPT='%F{white}%~%f %F{cyan}${vcs_info_msg_0_}%f '
 
 # syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

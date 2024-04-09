@@ -66,3 +66,9 @@ alias gcp='git cherry-pick'
 alias gcpc='git cherry-pick --continue'
 alias gcpa='git cherry-pick --abort'
 alias gcps='git cherry-pick --skip'
+
+# Config
+alias gcf='git config'
+alias gcfun='git config user.name'
+alias gcfue='git config user.email'
+alias gcfme='git config user.name "Alex Pyzhianov" && git config user.email alex.pyzhianov@gmail.com'
