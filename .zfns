@@ -1,0 +1,32 @@
+function modse() {
+  if [ -z "$1" ]; then
+    echo "Usage: modse <prompt> [num] [size]"
+    return 1
+  fi
+
+  if [ -z "$OPENAI_API_KEY" ]; then
+    echo "Please set OPENAI_API_KEY"
+    return 1
+  fi
+
+  NUM=${2:-1}
+  SIZE=${3:-"1024x1024"}
+
+  curl https://api.openai.com/v1/images/generations \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer $OPENAI_API_KEY" \
+    -d '{
+      "model": "dall-e-3",
+      "prompt": "'$1'",
+      "n": '"$NUM"',
+      "size": "'"$SIZE"'"
+    }'
+}
+
+function brewu() {
+    brew update
+    brew upgrade
+    brew cleanup
+    brew autoremove
+    echo "Done updating brew"
+}

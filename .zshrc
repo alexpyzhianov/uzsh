@@ -1,11 +1,11 @@
 # version control
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%b'
+zstyle ':vcs_info:git:*' formats '%b '
 
 # prompt
 setopt PROMPT_SUBST
-PROMPT='%F{white}%~%f %F{cyan}${vcs_info_msg_0_}%f '
+PROMPT='%F{white}%~%f %F{cyan}${vcs_info_msg_0_}%f'
 
 # syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -51,3 +51,15 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # node
 export PATH=~/.node_versions/v20/bin:$PATH
+
+# sound input/output
+alias sooa="SwitchAudioSource -t output -u '74-15-F5-28-97-B9:output'"
+alias soia="SwitchAudioSource -t input -u '74-15-F5-28-97-B9:input'"
+alias soom="SwitchAudioSource -t output -u 'BuiltInSpeakerDevice'"
+alias soim="SwitchAudioSource -t input -u 'BuiltInMicrophoneDevice'"
+
+# fns
+[ -f ~/.zfns ] && source ~/.zfns
+
+# private
+[ -f ~/.zprivate ] && source ~/.zprivate
