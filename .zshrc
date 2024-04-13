@@ -57,6 +57,7 @@ alias sooa="SwitchAudioSource -t output -u '74-15-F5-28-97-B9:output'"
 alias soia="SwitchAudioSource -t input -u '74-15-F5-28-97-B9:input'"
 alias soom="SwitchAudioSource -t output -u 'BuiltInSpeakerDevice'"
 alias soim="SwitchAudioSource -t input -u 'BuiltInMicrophoneDevice'"
+alias meet="soim && sooa"
 
 # fns
 [ -f ~/.zfns ] && source ~/.zfns

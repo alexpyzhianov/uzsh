@@ -9,18 +9,31 @@ function modse() {
     return 1
   fi
 
-  NUM=${2:-1}
-  SIZE=${3:-"1024x1024"}
+  GENERATION_MODE=${2:-enhanced}
+  IMAGE_COUNT=${3:-1}
+  IMAGE_DIMENSIONS=${4:-"1024x1024"}
+
+  SIMPLICITY_MODIFIER="I NEED to test how the tool works with extremely simple prompts. DO NOT add any detail, just use it AS-IS:"
+
+  if [ "$GENERATION_MODE" = "simple" ]; then
+    CHAT_PROMPT="$SIMPLICITY_MODIFIER $1"
+  else
+    CHAT_PROMPT="$1"
+  fi
+
+  JSON_PAYLOAD=$(jq -n \
+    --arg model "dall-e-3" \
+    --arg prompt "$CHAT_PROMPT" \
+    --argjson n "$IMAGE_COUNT" \
+    --arg size "$IMAGE_DIMENSIONS" \
+    '{model: $model, prompt: $prompt, n: $n, size: $size}')
 
   curl https://api.openai.com/v1/images/generations \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $OPENAI_API_KEY" \
-    -d '{
-      "model": "dall-e-3",
-      "prompt": "'$1'",
-      "n": '"$NUM"',
-      "size": "'"$SIZE"'"
-    }'
+    -d "$JSON_PAYLOAD"
+  
+  return 0
 }
 
 function brewu() {
