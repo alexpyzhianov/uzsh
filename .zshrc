@@ -38,10 +38,6 @@ eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 100% --layout=reverse'
 
-# aws
-alias aws="aws-mfa-secure session"
-alias awsd="export AWS_PROFILE=default && aws-mfa-secure session"
-
 # ruby
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH
@@ -51,6 +47,9 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # node
 export PATH=~/.node_versions/v20/bin:$PATH
+
+# haskell
+[ -f "/Users/alpy/.ghcup/env" ] && . "/Users/alpy/.ghcup/env" # ghcup-env
 
 # sound input/output
 alias sooa="SwitchAudioSource -t output -u '74-15-F5-28-97-B9:output'"

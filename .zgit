@@ -1,10 +1,12 @@
 # Add
 alias ga='git add'
 alias gaa='git add .'
+alias gap='git add -p'
 
 # Branch
 alias gb='git branch'
 alias gbd='git branch -d'
+alias gbD='git branch -D'
 
 # Cherry-pick
 alias gcp='git cherry-pick'
@@ -53,6 +55,7 @@ alias gms='git merge --skip'
 
 # Pull
 alias gpl='git pull'
+alias gplr='git pull --rebase'
 
 # Push
 alias gpu='git push'
@@ -78,8 +81,8 @@ alias gr='git reset'
 alias grh='git reset --hard'
 
 # Status
-alias gs='git status'
-alias gss='git status -s'
+alias gst='git status'
+alias gsts='git status -s'
 
 # Stash
 alias gsp='git stash push -u -m'
@@ -94,5 +97,7 @@ alias gsw='git switch'
 alias gswc='git switch -c'
 
 # Special
-alias wip='git add . && git commit --no-verify -m "wip"'
+alias wipc='git add . && git commit --no-verify -m "wip"'
 alias wipr='git reset --soft HEAD~1'
+alias wips='git stash push -u -m "wip"'
+alias wipp='git stash pop'
