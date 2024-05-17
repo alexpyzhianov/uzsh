@@ -1,7 +1,7 @@
 # Add
 alias ga='git add'
 alias gaa='git add .'
-alias gap='git add -p'
+alias gap='git add -N . && git add -p'
 
 # Branch
 alias gb='git branch'
@@ -77,8 +77,8 @@ alias grma='git remote add'
 alias grmr='git remote remove'
 
 # Reset / remote
-alias gr='git reset'
-alias grh='git reset --hard'
+alias grs='git reset'
+alias grsh='git reset --hard'
 
 # Status
 alias gst='git status'

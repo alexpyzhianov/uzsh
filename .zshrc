@@ -48,8 +48,8 @@ export PATH=/opt/homebrew/bin:$PATH
 # node
 export PATH=~/.node_versions/v20/bin:$PATH
 
-# haskell
-[ -f "/Users/alpy/.ghcup/env" ] && . "/Users/alpy/.ghcup/env" # ghcup-env
+# go
+export PATH=~/go/bin:$PATH
 
 # sound input/output
 alias sooa="SwitchAudioSource -t output -u '74-15-F5-28-97-B9:output'"
