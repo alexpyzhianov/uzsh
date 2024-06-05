@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function modse() {
   if [ -z "$1" ]; then
     echo "Usage: modse <prompt> [num] [size]"
@@ -32,14 +34,14 @@ function modse() {
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $OPENAI_API_KEY" \
     -d "$JSON_PAYLOAD"
-  
+
   return 0
 }
 
 function brewu() {
-    brew update
-    brew upgrade
-    brew cleanup
-    brew autoremove
-    echo "Done updating brew"
+  brew update
+  brew upgrade
+  brew cleanup
+  brew autoremove
+  echo "Done updating brew"
 }

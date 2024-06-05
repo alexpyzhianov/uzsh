@@ -1,12 +1,26 @@
+#!/bin/bash
+
 # Add
 alias ga='git add'
 alias gaa='git add .'
 alias gap='git add -N . && git add -p'
 
+# Bisect
+alias gbis='git bisect'
+alias gbisb='git bisect bad'
+alias gbisg='git bisect good'
+alias gbisre='git bisect reset'
+alias gbisst='git bisect start'
+alias gbisrn='git bisect run'
+
 # Branch
 alias gb='git branch'
+alias gbv='git branch -v --sort=-committerdate'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
+
+# Cat file
+alias gcf='git cat-file -p'
 
 # Cherry-pick
 alias gcp='git cherry-pick'
@@ -25,10 +39,10 @@ alias gcar='git commit --amend --reuse-message=HEAD'
 alias gcarr='git commit --amend --reuse-message=HEAD --reset-author'
 
 # Config
-alias gcf='git config'
-alias gcfun='git config user.name'
-alias gcfue='git config user.email'
-alias gcfme='git config user.name "Alex Pyzhianov" && git config user.email alex.pyzhianov@gmail.com'
+alias gcfg='git config'
+alias gcfgun='git config user.name'
+alias gcfgue='git config user.email'
+alias gcfgme='git config user.name "Alex Pyzhianov" && git config user.email alex.pyzhianov@gmail.com'
 
 # Diff
 alias gd='git diff'
@@ -45,7 +59,11 @@ alias gl='git log --date=relative'
 alias glg='gl --graph'
 alias gls='gl --stat'
 alias glp='gl --patch'
+alias glpf='gl --patch --'
 alias glo='git log --pretty=format:"%h   %s %C(yellow)(%cr)"'
+alias gla='git log --all --graph --decorate --oneline'
+alias glb='git log --branches --graph --decorate --oneline'
+alias glt='git log --tags --graph --decorate --oneline'
 
 # Merge
 alias gm='git merge'
@@ -81,8 +99,8 @@ alias grs='git reset'
 alias grsh='git reset --hard'
 
 # Status
-alias gst='git status'
-alias gsts='git status -s'
+alias gst='git status --show-stash'
+alias gstsb='git status --short --branch'
 
 # Stash
 alias gsp='git stash push -u -m'
@@ -91,13 +109,20 @@ alias gsl='git stash list'
 alias gsa='git stash apply'
 alias gsd='git stash drop'
 alias gsc='git stash clear'
+alias gss='git stash show'
 
 # Switch
 alias gsw='git switch'
 alias gswc='git switch -c'
 
-# Special
+# Wip
 alias wipc='git add . && git commit --no-verify -m "wip"'
 alias wipr='git reset --soft HEAD~1'
 alias wips='git stash push -u -m "wip"'
 alias wipp='git stash pop'
+
+# Worktree
+alias gwt='git worktree'
+alias gwta='git worktree add'
+alias gwtl='git worktree list'
+alias gwtpr='git worktree prune'
