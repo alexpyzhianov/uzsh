@@ -30,6 +30,8 @@ alias gcps='git cherry-pick --skip'
 
 # Clone
 alias gcl='git clone'
+alias gclb='git clone --branch'
+alias gcls1='git clone --single-branch --depth=1'
 
 # Commit
 alias gcm='git commit -m'
@@ -42,7 +44,6 @@ alias gcarr='git commit --amend --reuse-message=HEAD --reset-author'
 alias gcfg='git config'
 alias gcfgun='git config user.name'
 alias gcfgue='git config user.email'
-alias gcfgme='git config user.name "Alex Pyzhianov" && git config user.email alex.pyzhianov@gmail.com'
 
 # Diff
 alias gd='git diff'
@@ -114,6 +115,7 @@ alias gss='git stash show'
 # Switch
 alias gsw='git switch'
 alias gswc='git switch -c'
+alias gswd='git switch - && git branch -d $(git rev-parse --abbrev-ref @{-1})'
 
 # Wip
 alias wipc='git add . && git commit --no-verify -m "wip"'

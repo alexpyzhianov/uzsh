@@ -21,7 +21,6 @@ git clone git@github.com:alexpyzhianov/uzsh.git
 ```
 ln -s $HOME/repo_location/.zgit $HOME
 ln -s $HOME/repo_location/.zshrc $HOME
-ln -s $HOME/repo_location/.zfns $HOME
 ```
 
 1. (optional) Create .zprivate file for API keys and other sensitive information
